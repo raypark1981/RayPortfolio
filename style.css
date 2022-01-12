@@ -1,0 +1,6 @@
+/* 
+번외 : cal(var(--nameing) * 2)) 계산식으로도 사용가능 
+*/
+:root {
+  --font-size: 32px;
+}
