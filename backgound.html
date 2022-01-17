@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 100%;
+        height: 200px;
+        margin-bottom:20px;
+    }
+
+    .box1{
+        background-image: url('imgs/background-sample.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .box2{
+        background: border-box red;
+    }
+    .box3{
+        /* postion/size 묶어 쓸수있음 */
+        background: no-repeat center/cover url('imgs/background-sample.jpeg')
+    }
+</style>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</body>
+</html>

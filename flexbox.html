@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color:beige;
+        height:15vh;
+        display: flex;
+        margin-bottom:10px;
+        /* flex-flow : column nowrap;  */
+        flex-direction:row;
+        flex-wrap: wrap;
+        /* 다음은 어떻게 item 들을 정리 할지 여부 */
+        
+    }
+    .container1{
+        justify-content:space-between; 
+        /* main axis 에서 정렬 여부 결정 */
+    }
+   .container2{
+        justify-content:space-around;
+        align-items:baseline;
+    }
+   .container3{
+        justify-content:space-evenly;
+        align-items:center;
+        /* cross axis 축에서 배치여부 */
+    }
+    .item{
+        width:80px;
+        height:80px;
+    }
+    .item1{background-color:#ccfff7}
+    .item2{background-color:#ffdddd}
+    .item3{background-color:#d5fdcd}
+    .item4{background-color:#e9ddff}
+    .item5{background-color:#ffffff}
+    .item6{background-color:#ce8ddb}
+    .item7{background-color:#d15252}
+    .item8{background-color:#59bb46}
+    .item9{background-color:#795c74}
+    .item10{background-color:#aabb4a}
+</style>
+<body>
+    <h1>flexbox 사용법 , Container 값들 알아보기2</h1>
+    <h3>Justify-content : space-between</h3> 
+    <div class="container container1">
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+        <div class="item item4">item4</div>
+        <div class="item item5">item5</div>
+        <div class="item item6">item6</div>
+        <div class="item item7">item7</div>
+        <div class="item item8">item8</div>
+        <div class="item item9">item9</div>
+        <div class="item item10">item10</div>
+    </div>
+    <h3>Justify-content : space-around , align-items: baseline (item1 에 패딩이 있을시 라인을 맞출수있음)</h3>
+    <div class="container container2">
+        <div style="padding:20px" class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+        <div class="item item4">item4</div>
+        <div class="item item5">item5</div>
+        <div class="item item6">item6</div>
+        <div class="item item7">item7</div>
+        <div class="item item8">item8</div>
+        <div class="item item9">item9</div>
+        <div class="item item10">item10</div>
+    </div>
+    <h3>Justify-content : space-evenly , align-item : center</h3>
+    <div class="container container3">
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+        <div class="item item4">item4</div>
+        <div class="item item5">item5</div>
+        <div class="item item6">item6</div>
+        <div class="item item7">item7</div>
+        <div class="item item8">item8</div>
+        <div class="item item9">item9</div>
+        <div class="item item10">item10</div>
+    </div>
+</body>
+</html>
