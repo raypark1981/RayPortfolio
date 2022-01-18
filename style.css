@@ -84,7 +84,7 @@ h1 {
   margin: 16px 0px;
 }
 h2 {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0px;
@@ -364,4 +364,25 @@ p {
   background-color: var(--color-dark-grey);
   display: block;
   margin: 10px auto 5px auto;
+}
+/* Contact */
+#contact {
+  background-color: var(--color-point-red4);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+.contact__link {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+.contact__link i:hover {
+  transform: scale(1.2);
 }
