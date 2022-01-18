@@ -131,15 +131,25 @@ p {
   margin: 0 4px;
   border-radius: var(--size-border-radius);
 }
-
 .navbar__menu__item.active {
   border: 1px solid var(--color-white);
 }
-
 .navbar__menu__item:hover {
   background-color: var(--color-main-dark2);
 }
-
+.navbar__toggle-btn {
+  /* display:  */
+  position: absolute;
+  color: var(--color-light-white);
+  font-size: 24px;
+  right: 0;
+  top: 4px;
+  margin: 18px 32px 18px 0;
+}
+.fa-bars,
+.fa-hamburger {
+  display: none;
+}
 /* Home */
 
 #home {
@@ -148,19 +158,16 @@ p {
   text-align: center;
   height: 670px;
 }
-
 .home__avator {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   border: 2px solid var(--color-light-white);
 }
-
 .home__title,
 .home__description {
   color: var(--color-light-white);
 }
-
 .home__contact {
   margin: 24px;
   padding: 8px 12px;
@@ -170,26 +177,22 @@ p {
   border: 2px solid var(--color-light-white);
   border-radius: var(--size-border-radius);
 }
-
 /* Section Common */
 .section {
   padding: 50px;
   text-align: center;
   margin: auto;
 }
-
 .section__container {
   max-width: 1200px;
   margin: auto;
 }
-
 /* About */
 .about__majors {
   display: flex;
   justify-content: space-between;
   margin: 80px 0;
 }
-
 .major__icon {
   width: 170px;
   height: 170px;
@@ -385,4 +388,49 @@ p {
 }
 .contact__link i:hover {
   transform: scale(1.2);
+}
+
+/* For below  768px screen width*/
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn .fa-bars {
+    display: block;
+  }
+  .navbar__toggle-btn:hover .fa-bars {
+    display: none;
+  }
+  .navbar__toggle-btn:hover .fa-hamburger {
+    display: block;
+  }
+  #home {
+    height: inherit;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+  .major {
+    margin: 0 auto 50px auto;
+  }
+  .job {
+    flex-direction: column;
+  }
+  .job__logo_box {
+    width: 100%;
+  }
+  .skillset {
+    flex-direction: column;
+  }
+  .project {
+    flex-grow: 1;
+  }
 }
