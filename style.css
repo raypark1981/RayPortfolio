@@ -104,12 +104,21 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-main-dark1);
+  /* background-color: var(--color-main-dark1); */
+  background-color: transparent;
   color: var(--color-white);
   padding: 16px;
+  transition: all 300ms ease-in-out;
+}
+
+#navbar.navbar-dark {
+  background-color: var(--color-main-dark1);
+  padding: 8px;
 }
 
 .navbar__logo {
@@ -155,6 +164,7 @@ p {
 #home {
   background: center/cover no-repeat url("/imgs/focus_on_your_life.png");
   padding: 40px;
+  padding-top: 80px;
   text-align: center;
   height: 670px;
 }
