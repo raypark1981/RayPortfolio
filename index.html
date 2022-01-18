@@ -20,15 +20,13 @@
             <i class="fab fa-ray"></i>
             <a href="#">RAY DEV & SK8</a>
         </div>
-        <div class="navbar__menu">
-            <ul class="navbar__menu">
-                <li class="navbar__menu__item active">Home</li>
-                <li class="navbar__menu__item">About</li>
-                <li class="navbar__menu__item">Skills</li>
-                <li class="navbar__menu__item">Works</li>
-                <li class="navbar__menu__item">Contact</li>
-            </ul>
-        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item" data-link="#home">Home</li>
+            <li class="navbar__menu__item" data-link="#about">About</li>
+            <li class="navbar__menu__item" data-link="#skills">Skills</li>
+            <li class="navbar__menu__item" data-link="#works">Works</li>
+            <li class="navbar__menu__item" data-link="#contact">Contact</li>
+        </ul>
         <button class="navbar__toggle-btn">
             <i class="fas fa-bars"></i>
             <i class="fas fa-hamburger"></i>
@@ -36,14 +34,16 @@
     </nav>
     <!-- Home -->
     <section id="home">
-        <img src="/imgs/me_sk8.png" alt="Ray's profile photo" class="home__avator">
-        <h1 class="home__title">Hello, <br>Front-end, back-end programmer</h1>
-        <h2 class="home__description">A Software Engineer residing Seoul, Korea And Enjoying Sk8Borad</h2>
-        <button class="home__contact">Contact Me</button>
+        <div class="home__container">
+            <img src="/imgs/me_sk8.png" alt="Ray's profile photo" class="home__avator">
+            <h1 class="home__title">Hello, <br>Front-end, back-end programmer</h1>
+            <h2 class="home__description">A Software Engineer residing Seoul, Korea And Enjoying Sk8Borad</h2>
+            <button class="home__contact">Contact Me</button>
+        </div>
     </section>
     <!-- About me -->
     <section id="about" class="section section__container">
-        <h1>Abount me</h1>
+        <h1>About me</h1>
         <p class="about__description">
             성격은 수평적 인간관계를 좋아하며, 팀원들과 대화를 하는 것을 좋아합니다. 
             <br/>
@@ -89,7 +89,7 @@
                     <div class="job__period">2016.3월 ~ 2021.12월</div>
                 </div>
             </div>
-            <div class="job">
+            <div class="job"
                 <div class="job__logo_box">
                     <img src="/imgs/jobs/halfclub.png" alt="" class="job__logo">
                 </div>
@@ -204,144 +204,144 @@
             <h1>Works</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-            <button class="category__btn active">All
+            <button class="category__btn active" data-target="all">All
                 <span class="category__count">8                  
                 </span>
             </button>
-            <button class="category__btn">Front-end
+            <button class="category__btn" data-target="frontend">Front-end
                 <span class="category__count">2
                 </span>
             </button>
-            <button class="category__btn">.Net
+            <button class="category__btn" data-target="net">.Net
                 <span class="category__count">5                  
                 </span>
             </button>
-            <button class="category__btn">Application
+            <button class="category__btn" data-target="application">Application
                 <span class="category__count">1                  
                 </span>
             </button>
         </div>
         <div class="work__projects">
-            <a class="project">
+            <a class="project" data-target="frontend">
                 <img src="/imgs/projects/foodkiper_1.png" alt="foodkiper">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="frontend">
                 <img src="/imgs/projects/foodkiper_2.png" alt="foodkiper">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="frontend">
                 <img src="/imgs/projects/foodkiper_3.png" alt="foodkiper">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="frontend">
                 <img src="/imgs/projects/foodkiper_4.png" alt="foodkiper">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="frontend">
                 <img src="/imgs/projects/foodkiper_5.png" alt="foodkiper">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="frontend">
                 <img src="/imgs/projects/foodkiper_6.png" alt="foodkiper">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="net">
                 <img src="/imgs/projects/inter_mticket_1.png" alt="mticket_interpark">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="net">
                 <img src="/imgs/projects/inter_mticket_2.png" alt="mticket_interpark">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="net">
                 <img src="/imgs/projects/inter_mticket_3.png" alt="mticket_interpark">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="net">
                 <img src="/imgs/projects/inter_mticket_4.png" alt="mticket_interpark">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="net">
                 <img src="/imgs/projects/inter_ticket_1.png" alt="ticket_interpark">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="net">
                 <img src="/imgs/projects/inter_ticket_2.png" alt="ticket_interpark">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="net">
                 <img src="/imgs/projects/inter_ticket_3.png" alt="ticket_interpark">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="net">
                 <img src="/imgs/projects/inter_ticket_4.png" alt="ticket_interpark">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="application">
                 <img src="/imgs/projects/inter_ticket_service_1.png" alt="ticket_service_interpark">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="net">
                 <img src="/imgs/projects/inter_ticket_service_2.png" alt="ticket_service_interpark">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="net">
                 <img src="/imgs/projects/inter_tour_1.png" alt="tour_interpark">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
                     <span class="project_description">description of project!good!</span>
                 </div>
             </a>
-            <a class="project">
+            <a class="project" data-target="net">
                 <img src="/imgs/projects/inter_tour_2.png" alt="tour_interpark">
                 <div class="project__description">
                     <h3 class="project_name">temp title</h3>
@@ -362,5 +362,9 @@
             2022 Ray's Portfolio - All rights reserved
         </p>
     </section>
+    <!-- Arrow up -->
+    <button class="arrow-up">
+        <i class="fas fa-arrow-alt-circle-up"></i>
+    </button>
 </body>
 </html>
