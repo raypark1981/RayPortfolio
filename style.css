@@ -118,7 +118,7 @@ p {
 
 #navbar.navbar-dark {
   background-color: var(--color-main-dark1);
-  padding: 8px;
+  padding: 16px 8px;
   z-index: 1;
 }
 
@@ -306,6 +306,7 @@ p {
 .category__btn:hover {
   background-color: var(--color-point-red3);
   color: var(--color-light-white);
+  position: relative;
 }
 
 .category__count {
@@ -318,16 +319,16 @@ p {
   height: 24px;
   line-height: 24px;
   opacity: 0;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 18px;
   transition: all 300ms ease;
 }
 .category__btn:hover .category__count,
 .category__btn.active .category__count {
   border: 1px solid var(--color-light-white);
   opacity: 1;
-  top: 0;
+  top: 5px;
 }
 
 .work__projects {
@@ -418,7 +419,7 @@ p {
 
 .arrow-up {
   position: fixed;
-  bottom: 10px;
+  bottom: 0px;
   right: 20px;
   width: 95px;
   height: 95px;
@@ -437,6 +438,15 @@ p {
 
 /* For below  768px screen width*/
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn .fa-bars {
     display: block;
   }
@@ -453,8 +463,17 @@ p {
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--color-main-dark1);
-    padding: 8px;
     z-index: 1;
+    opacity: 1;
+    transition: all 600ms ease;
+  }
+  #navbar.invisible {
+    padding: 8px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .section {
+    padding: 16px;
   }
   .navbar__menu {
     width: 100%;
@@ -468,9 +487,19 @@ p {
 
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0;
   }
   .major {
     margin: 0 auto 50px auto;
+  }
+  .category__btn {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+  .category__count {
+    right: 64px;
   }
   .job {
     flex-direction: column;
@@ -483,5 +512,10 @@ p {
   }
   .project {
     flex-grow: 1;
+  }
+  .arrow-up {
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
   }
 }
