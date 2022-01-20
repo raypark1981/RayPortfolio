@@ -9,7 +9,7 @@ const workProjects = document.querySelector(".work__projects");
 
 // Observer
 let observeOption = {
-  threshold: 0.5,
+  threshold: 0.3,
 };
 
 let selectSection = (id) => {
@@ -21,12 +21,8 @@ let selectSection = (id) => {
 };
 
 let callbackObserve = function (entries, observer) {
-  console.log(entries);
   entries.forEach((entry) => {
-    if (
-      entry.intersectionRatio > 0.5 &&
-      (entry.target.id == "contact" || entry.target.id == "home")
-    ) {
+    if (entry.intersectionRatio > 0.3 && entry.target.id == "contact") {
       selectSection(entry.target.id);
       return;
     }
@@ -49,6 +45,16 @@ let last_known_scroll_position = 0;
 let ticking = false;
 let timer = null;
 
+// 사용자 휠 이벤트
+window.addEventListener("wheel", () => {
+  last_known_scroll_position = window.scrollY;
+
+  if (last_known_scroll_position == 0) {
+    selectSection("home");
+  }
+});
+
+// 스크롤시 이벤트
 window.addEventListener("scroll", function () {
   last_known_scroll_position = window.scrollY;
 
