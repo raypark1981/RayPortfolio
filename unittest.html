@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 60vh;
+        height: 200px;
+      }
+      .rem {
+        background-color: rgb(103, 103, 255);
+        font-size: 4rem;
+        padding: 1em;
+      }
+      .em {
+        background-color: rgb(242, 103, 255);
+        font-size: 4em;
+        padding: 1em;
+      }
+      .rem-child {
+        font-size: 0.5rem;
+        padding: 1em;
+        background-color: burlywood;
+      }
+      .em-child {
+        font-size: 0.5em;
+        padding: 1em;
+        background-color: burlywood;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rem parent">
+      REM Parent 4rem
+      <div class="rem-child">.5rem Child root 의 영향을 받아 8px;</div>
+    </div>
+    <div class="em parent">
+      EM Parent 4em
+      <div class="em-child">
+        .5em Child 상대적 부모의 영향을 받아 4em * 16 * .5 = 32px;
+      </div>
+    </div>
+  </body>
+</html>

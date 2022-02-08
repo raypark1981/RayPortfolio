@@ -54,13 +54,16 @@ window.addEventListener("wheel", () => {
   }
 });
 
+const home = document.querySelector(".home__container");
+const arrowup = document.querySelector(".arrow-up");
+const navbar = document.querySelector("#navbar");
+
 // 스크롤시 이벤트
 window.addEventListener("scroll", function () {
   last_known_scroll_position = window.scrollY;
 
   if (!ticking) {
     window.requestAnimationFrame(function () {
-      const navbar = document.querySelector("#navbar");
       const navbarHeight = navbar.getBoundingClientRect().height;
 
       // 스크롤시 메뉴 열려 있으면 닫기
@@ -75,8 +78,6 @@ window.addEventListener("scroll", function () {
         navbar.classList.remove("navbar-dark");
       }
 
-      const home = document.querySelector(".home__container");
-      const arrowup = document.querySelector(".arrow-up");
       const homeHeight = home.getBoundingClientRect().height;
       let heightRate = last_known_scroll_position / homeHeight;
 
