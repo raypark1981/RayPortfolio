@@ -54,12 +54,12 @@ window.addEventListener("wheel", () => {
   }
 });
 
-const home = document.querySelector(".home__container");
-const arrowup = document.querySelector(".arrow-up");
-const navbar = document.querySelector("#navbar");
-
 // 스크롤시 이벤트
 window.addEventListener("scroll", function () {
+  const home = document.querySelector(".home__container");
+  const arrowup = document.querySelector(".arrow-up");
+  const navbar = document.querySelector("#navbar");
+
   last_known_scroll_position = window.scrollY;
 
   if (!ticking) {

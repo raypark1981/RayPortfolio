@@ -32,11 +32,11 @@
   --color-black: #000000;
 
   /* Font size */
-  --font-large: 48px;
-  --font-medium: 28px;
-  --font-regular: 18px;
-  --font-small: 16px;
-  --font-micro: 14px;
+  --font-large: 3rem;
+  --font-medium: 1.75rem;
+  --font-regular: 1.125rem;
+  --font-small: 1rem;
+  --font-micro: 0.875rem;
 
   /* Font weight */
   --weight-bold: 700;
@@ -44,7 +44,7 @@
   --weight-regular: 400;
 
   /* Size */
-  --size-border-radius: 4px;
+  --size-border-radius: 0.25rem;
 }
 
 /* Universal Tag */
@@ -81,25 +81,25 @@ h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
-  margin: 16px 0px;
+  margin: 1rem 0px;
 }
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
-  margin: 8px 0px;
+  margin: 0.5rem 0px;
 }
 h3 {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
-  margin: 8px 0px;
+  margin: 0.5rem 0px;
 }
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
-  margin: 4px 0px;
+  margin: 0.25rem 0px;
 }
 
 /* Navbar */
@@ -118,7 +118,7 @@ p {
 
 #navbar.navbar-dark {
   background-color: var(--color-main-dark1);
-  padding: 16px 8px;
+  padding: 1em .5rem;
   z-index: 1;
 }
 
@@ -129,16 +129,16 @@ p {
 
 .fa-ray {
   background: no-repeat 0/100% url("/imgs/favicon.png");
-  width: 40px;
-  height: 40px;
-  margin-right: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: .3125em;
 }
 .navbar__menu {
   display: flex;
 }
 .navbar__menu__item {
-  padding: 8px 12px;
-  margin: 0 4px;
+  padding: .5rem 0.75em;
+  margin: 0 .25em;
   border: 1px solid transparent;
   border-radius: var(--size-border-radius);
 }
@@ -151,10 +151,10 @@ p {
   /* display:  */
   position: absolute;
   color: var(--color-light-white);
-  font-size: 24px;
+  font-size: 1.5rem;
   right: 0;
-  top: 4px;
-  margin: 18px 32px 18px 0;
+  top: 0.1em;
+  margin: 1.125em 2rem 1.125em 0;
 }
 .fa-bars,
 .fa-hamburger {
@@ -164,14 +164,14 @@ p {
 
 #home {
   background: center/cover no-repeat url("/imgs/focus_on_your_life.png");
-  padding: 40px;
-  padding-top: 80px;
+  padding: 2.5rem;
+  padding-top: 5rem;
   text-align: center;
-  height: 670px;
+  height: 41.875rem;
 }
 .home__avator {
-  width: 250px;
-  height: 250px;
+  width: 15.625rem;
+  height: 15.625rem;
   border-radius: 50%;
   border: 2px solid var(--color-light-white);
 }
@@ -180,8 +180,8 @@ p {
   color: var(--color-light-white);
 }
 .home__contact {
-  margin: 24px;
-  padding: 8px 12px;
+  margin: 1.5rem;
+  padding: 0.6em 0.75rem;
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-light-white);
@@ -190,47 +190,55 @@ p {
 }
 /* Section Common */
 .section {
-  padding: 50px;
+  padding: 3.125rem;
   text-align: center;
   margin: auto;
 }
 .section__container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: auto;
 }
 /* About */
 .about__majors {
   display: flex;
   justify-content: space-between;
-  margin: 80px 0;
+  margin: 5em 0;
+}
+.major__title{
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 .major__icon {
-  width: 170px;
-  height: 170px;
-  font-size: 72px;
+  width: 10.625rem;
+  height: 10.625rem;
+  font-size: 4.5rem;
   border: 2px solid var(--color-main-dark3);
   border-radius: 50%;
   text-align: center;
-  line-height: 170px;
-  margin-bottom: 16px;
+  line-height: 10.625rem;
+  margin-bottom: 1rem;
 }
 
 .major__icon:hover i {
-  color: var(--color-point-red3);
+  color: var(--color-light-grey);
   transition: all 300ms ease;
 }
 
 .job {
   display: flex;
   align-items: center;
+  margin-bottom: 1em;
 }
 .job__logo_box {
   width: 25%;
-  padding: 2px 0;
+  padding: 0.125rem 0;
+  flex-basis: 30%;
   /* border: 1px solid var(--color-main-dark1); */
 }
 .job__description {
   text-align: left;
+    width: 100%;
+    text-indent: 5rem;
 }
 .job__name,
 .job__period {
@@ -253,12 +261,12 @@ p {
   display: flex;
   color: var(--color-light-white);
   background-color: var(--color-light-grey);
-  margin: 20px 0;
+  margin: 1.25rem 0;
 }
 
 .skillset__left {
   flex-basis: 60%;
-  padding: 20px 40px;
+  padding: 1.25rem 40px;
   background-color: var(--color-dark-grey);
 }
 
@@ -277,10 +285,10 @@ p {
   background-color: var(--color-grey);
 }
 .skill {
-  margin-bottom: 32px;
+  margin-bottom: 2em;
 }
 .skill__bar {
-  height: 3px;
+  height: 0.1875rem;
   background-color: var(--color-grey);
 }
 .skill__value {
@@ -290,46 +298,47 @@ p {
 
 .tools,
 .etc {
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 /* Work */
 .work__categories {
-  margin: 40px;
+  margin: 2.5rem;
 }
 .category__btn {
   border: 1px solid var(--color-dark-grey);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
-  padding: 8px 48px;
+  padding: .5em 3rem;
 }
-.category__btn.active,
-.category__btn:hover {
-  background-color: var(--color-point-red3);
+.category__btn.active
+/* , .category__btn:hover  */
+{
+  background-color: var(--color-dark-grey);
   color: var(--color-light-white);
   position: relative;
 }
 
 .category__count {
   display: inline-block;
-  background-color: var(--color-point-red4);
+  background-color: var(--color-light-grey);
   color: var(--color-light-white);
   border: 1px solid var(--color-dark-grey);
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
   opacity: 0;
   position: absolute;
-  top: -20px;
-  right: 18px;
+  top: -1.25rem;
+  right: 1.125rem;
   transition: all 300ms ease;
 }
 .category__btn:hover .category__count,
 .category__btn.active .category__count {
   border: 1px solid var(--color-light-white);
   opacity: 1;
-  top: 5px;
+  top: 0.3125rem;
 }
 
 .work__projects {
@@ -347,8 +356,8 @@ p {
 
 .project {
   width: 280px;
-  height: 250px;
-  margin: 2px;
+  height: 15.625rem;
+  margin: 0.125em;
   background-color: var(--color-light-white);
   position: relative;
   display: flex;
@@ -377,7 +386,7 @@ p {
   height: 100%;
   background-color: black;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(.625em);
   transition: all 300ms ease;
 }
 .project__description h3 {
@@ -388,11 +397,11 @@ p {
 }
 .project_name::after {
   content: "";
-  width: 70px;
-  height: 2px;
+  width: 4.375rem;
+  height: 0.125rem;
   background-color: var(--color-dark-grey);
   display: block;
-  margin: 10px auto 5px auto;
+  margin: 0.625em auto 0.3125em auto;
 }
 /* Contact */
 #contact {
@@ -406,11 +415,11 @@ p {
 }
 
 .contact__title {
-  margin: 32px 0;
+  margin: 2em 0;
 }
 .contact__link {
   font-size: var(--font-large);
-  margin: 24px 0;
+  margin: 1.5rem 0;
 }
 .contact__link i:hover {
   transform: scale(1.2);
@@ -421,11 +430,11 @@ p {
 .arrow-up {
   position: fixed;
   bottom: 0px;
-  right: 20px;
-  width: 95px;
-  height: 95px;
-  font-size: 86px;
-  color: var(--color-point-red1);
+  right: 1.25rem;
+  width: 5.9375rem;
+  height: 5.9375rem;
+  font-size: 5.375rem;
+  color: var(--color-dark-grey);
   opacity: 0;
   transition: all 300ms ease-in-out;
   pointer-events: none;
@@ -433,7 +442,7 @@ p {
 
 .arrow-up.show {
   opacity: 1;
-  bottom: 20px;
+  bottom: 1.25rem;
   pointer-events: auto;
 }
 
@@ -441,11 +450,11 @@ p {
 @media screen and (max-width: 768px) {
   :root {
     /* Font size */
-    --font-large: 30px;
-    --font-medium: 18px;
-    --font-regular: 16px;
-    --font-small: 14px;
-    --font-micro: 12px;
+    --font-large: 1.875rem;
+    --font-medium: 1.125rem;
+    --font-regular: 1rem;
+    --font-small: 0.875rem;
+    --font-micro: 0.75rem;
   }
 
   .navbar__toggle-btn .fa-bars {
@@ -469,12 +478,12 @@ p {
     transition: all 600ms ease;
   }
   #navbar.invisible {
-    padding: 8px;
+    padding: 0.5rem;
     opacity: 0;
     pointer-events: none;
   }
   .section {
-    padding: 16px;
+    padding: 1em;
   }
   .navbar__menu {
     width: 100%;
@@ -488,25 +497,36 @@ p {
 
   .about__majors {
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 1.875em;
     margin-bottom: 0;
   }
   .major {
-    margin: 0 auto 50px auto;
+    margin: 0 auto 3.125em auto;
   }
   .category__btn {
-    padding: 8px;
+    padding: .5em;
     width: 100%;
-    margin-bottom: 4px;
+    margin-bottom: 0.25em;
   }
   .category__count {
-    right: 64px;
+    right: 4em;
   }
   .job {
     flex-direction: column;
+    margin-bottom: 3.25em;
   }
   .job__logo_box {
+    width: 80%;
+  }
+  .job__logo_box img{
+    transform: scale(.8);
+    width: 70%;
+  }
+
+  .job__description {
+    text-align: center;
     width: 100%;
+    text-indent: 0;
   }
   .skillset {
     flex-direction: column;
@@ -515,8 +535,8 @@ p {
     flex-grow: 1;
   }
   .arrow-up {
-    width: 70px;
-    height: 70px;
-    font-size: 50px;
+    width: 4.375rem;
+    height: 4.375rem;
+    font-size: 3.125rem;
   }
 }
