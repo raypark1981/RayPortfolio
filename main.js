@@ -6,6 +6,7 @@ const arrowup = document.querySelector(".arrow-up");
 const hamburger = document.querySelector(".navbar__toggle-btn");
 const workCategoiesBtn = document.querySelector(".work__categories");
 const workProjects = document.querySelector(".work__projects");
+const backdrop = document.querySelector(".modal_backdrop");
 
 // Observer
 let observeOption = {
@@ -137,6 +138,19 @@ workCategoiesBtn.addEventListener("click", (e) => {
   targetBtn.classList.add("active");
   visibleProject(target);
 });
+
+workProjects.addEventListener("click", (e) => {
+  e.target.closest(".project").classList.add("clicked");
+  document.querySelector("body").style.overflow = "hidden";
+  document.querySelector(".modal_backdrop").style.display = "block";
+});
+
+backdrop.addEventListener("click", (e) => {
+  workProjects.querySelector(".project.clicked").classList.remove("clicked");
+  document.querySelector("body").style.overflow = "";
+  document.querySelector(".modal_backdrop").style.display = "none";
+});
+
 hamburger.addEventListener("click", (e) => {
   navbarMenu.classList.toggle("open");
 });
