@@ -145,6 +145,28 @@ workProjects.addEventListener("click", (e) => {
   document.querySelector(".modal_backdrop").style.display = "block";
 });
 
+workProjects.querySelectorAll(".project").forEach((item) => {
+  item.addEventListener("mouseenter", (e) => {
+    e.target.classList.add("hover");
+  });
+});
+
+workProjects.querySelectorAll(".project").forEach((item) => {
+  item.addEventListener("mouseleave", (e) => {
+    e.target.classList.remove("hover");
+  });
+});
+
+workProjects.querySelectorAll(".project").forEach((item) => {
+  item.addEventListener("click", (e) => {
+    if (e.currentTarget.classList.contains("hover")) {
+      e.currentTarget.classList.remove("hover");
+    } else {
+      e.currentTarget.classList.add("hover");
+    }
+  });
+});
+
 backdrop.addEventListener("click", (e) => {
   workProjects.querySelector(".project.clicked").classList.remove("clicked");
   document.querySelector("body").style.overflow = "";
