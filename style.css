@@ -437,6 +437,9 @@ box-shadow: 5px 5px 15px 5px #000000;
 .contact__rights {
   color: var(--color-white);
 }
+.contact__email{
+  cursor: pointer;
+}
 
 .contact__title {
   margin: 2em 0;
