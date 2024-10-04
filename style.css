@@ -128,7 +128,7 @@ p {
 }
 
 .fa-ray {
-  background: no-repeat 0/100% url("/imgs/favicon.png");
+  background: no-repeat 0/100% url("/RayPortfolio/imgs/favicon.png");
   width: 2.5rem;
   height: 2.5rem;
   margin-right: .3125em;
@@ -163,7 +163,7 @@ p {
 /* Home */
 
 #home {
-  background: center/cover no-repeat url("/imgs/focus_on_your_life.png");
+  background: center/cover no-repeat url("/RayPortfolio/imgs/focus_on_your_life.png");
   padding: 2.5rem;
   padding-top: 5rem;
   text-align: center;
